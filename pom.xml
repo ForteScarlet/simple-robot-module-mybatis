@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>love.forte.simple-robot-module</groupId>
+    <artifactId>mod-mybatis</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <core.version>1.16.2</core.version>
+        <mybatis.version>3.4.6</mybatis.version>
+        <mysql.version>6.0.5</mysql.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.github.ForteScarlet</groupId>
+            <artifactId>simple-robot-core</artifactId>
+            <version>${core.version}</version>
+        </dependency>
+
+        <!--mybatis坐标-->
+        <dependency>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>${mybatis.version}</version>
+        </dependency>
+        <!--mysql驱动坐标-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- https://search.maven.org/artifact/love.forte.simple-robot-module/simple-robot-module-debugger-common -->
+        <dependency>
+            <groupId>love.forte.simple-robot-module</groupId>
+            <artifactId>simple-robot-module-debugger-common</artifactId>
+            <version>1.1-1.15</version>
+            <optional>true</optional>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+</project>
