@@ -8,24 +8,26 @@
 ```properties
 # suppress inspection "UnusedProperty" for whole file
 
+# 此处指的是mapper.xml的扫描路径。
+# 暂时不支持通配符，只支持整个文件夹的扫描。
+# 此配置不受 simbot.mybatis.config 的影响，会一直生效。
+# 一般xml指定了namespace的话就用不着指定mapperScan了
+simbot.mapper.mapperResourceScan=mappers
+# mybatis的mapper接口的扫描路径。
+simbot.mapper.mapperScan=
+
 # mybatis的xml配置文件的资源路径。此配置文件需要使用UTF-8编码
 # 如果存在此配置，则以下其他的配置将会被忽略
+# 似乎会存在jar包情况下mapper.package失效的问题，如果出现此问题，则需要配置上面的配置信息.
 simbot.mybatis.config=conf.xml
-
 # 数据库驱动. 驱动相关的依赖需要自己导入
 simbot.db.driver=
-
 # 连接路径
 simbot.db.url=
-
 # 连接用户名
 simbot.db.name=
-
 # 连接密码
 simbot.db.password=
-
-# mybatis的mapper的扫描路径
-simbot.mapper.scanPackage=
 ```
 
 ## 使用方法
@@ -68,11 +70,6 @@ password=123456
             </dataSource>
         </environment>
     </environments>
-
-    <!-- 在配置文件中 关联包下的 接口类-->
-    <mappers>
-        <package name="com.com.forte.mapper" />
-    </mappers>
 </configuration>
 ```
 
@@ -80,6 +77,8 @@ password=123456
 
 ```properties
 simbot.mybatis.config=conf.xml
+simbot.mapper.mapperResourceScan=mappers
+simbot.mapper.mapperScan=
 ```
 
 当然，假如你不使用mybatis的xml配置，你依然可以使用简化版的配置：
@@ -87,6 +86,10 @@ simbot.mybatis.config=conf.xml
 > simple-robot-conf.properties: 
 
 ```properties
+# mapper.xml的扫描路径
+simbot.mapper.mapperResourceScan=mappers
+# mybatis的mapper的扫描路径
+simbot.mapper.scanPackage=com.forte.mapper
 # 数据库驱动. 驱动相关的依赖需要自己导入
 simbot.db.driver=com.mysql.cj.jdbc.Driver
 # 连接路径
@@ -95,6 +98,4 @@ simbot.db.url=jdbc:mysql://127.0.0.1:3306/test_db1?serverTimezone=UTC&useUnicode
 simbot.db.name=root
 # 连接密码
 simbot.db.password=123456
-# mybatis的mapper的扫描路径
-simbot.mapper.scanPackage=com.forte.mapper
 ```
