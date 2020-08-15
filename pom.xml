@@ -36,7 +36,7 @@
             <version>${mybatis.version}</version>
         </dependency>
 
-        <!--mysql驱动坐标-->
+        <!--mysql驱动坐标 测试用-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
