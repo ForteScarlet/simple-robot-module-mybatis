@@ -1,8 +1,22 @@
 # mod-mybatis
 
+[![](https://img.shields.io/badge/simple--robot-module-green)](https://github.com/ForteScarlet/simple-robot-core) [![](https://img.shields.io/maven-central/v/io.github.ForteScarlet.simple-robot-module/mod-mybatis)](https://search.maven.org/artifact/io.github.ForteScarlet.simple-robot-module/mod-mybatis)
+
 针对于mybatis的模组实现。
 
 注：默认使用的是`3.4.6`版本的Mybatis.
+
+## 导入依赖
+
+[![](https://img.shields.io/maven-central/v/io.github.ForteScarlet.simple-robot-module/mod-mybatis)](https://search.maven.org/artifact/io.github.ForteScarlet.simple-robot-module/mod-mybatis)
+
+```xml
+<dependency>
+    <groupId>love.forte.simple-robot-module</groupId>
+    <artifactId>mod-mybatis</artifactId>
+    <version>${version}</version>
+</dependency>
+```
 
 ## 配置文件
 ```properties
@@ -90,6 +104,7 @@ simbot.mapper.mapperScan=
 simbot.mapper.mapperResourceScan=mappers
 # mybatis的mapper的扫描路径
 simbot.mapper.scanPackage=com.forte.mapper
+
 # 数据库驱动. 驱动相关的依赖需要自己导入
 simbot.db.driver=com.mysql.cj.jdbc.Driver
 # 连接路径
