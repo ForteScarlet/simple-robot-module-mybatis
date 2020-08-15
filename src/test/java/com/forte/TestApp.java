@@ -1,7 +1,4 @@
-package com.forte; /**
- * @author ForteScarlet(ForteScarlet @ 163.com)
- * @since JDK1.8
- **/
+package com.forte;
 
 import com.forte.mapper.MsgMapper;
 import com.forte.qqrobot.SimpleRobotApplication;
@@ -23,6 +20,10 @@ public class TestApp {
         MsgMapper msgMapper = center.get(MsgMapper.class);
 
         System.out.println(msgMapper);
+        System.out.println(msgMapper.selectOne());
+        System.out.println(msgMapper.selectOne());
+        System.out.println(msgMapper.selectOne());
+        System.out.println(msgMapper.selectOne());
 
     }
 }
