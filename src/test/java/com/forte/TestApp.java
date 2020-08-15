@@ -1,6 +1,7 @@
 package com.forte;
 
 import com.forte.mapper.MsgMapper;
+import com.forte.mapper.MsgMapper2;
 import com.forte.qqrobot.SimpleRobotApplication;
 import com.forte.qqrobot.depend.DependCenter;
 import com.simbot.modules.debugger.common.DebugApplication;
@@ -21,9 +22,11 @@ public class TestApp {
 
         System.out.println(msgMapper);
         System.out.println(msgMapper.selectOne());
-        System.out.println(msgMapper.selectOne());
-        System.out.println(msgMapper.selectOne());
-        System.out.println(msgMapper.selectOne());
+
+        MsgMapper2 msgMapper2 = center.get(MsgMapper2.class);
+
+        System.out.println(msgMapper2);
+        System.out.println(msgMapper2.selectOne());
 
     }
 }

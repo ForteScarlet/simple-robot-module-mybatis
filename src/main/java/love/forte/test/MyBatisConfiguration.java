@@ -12,6 +12,9 @@ import com.forte.config.Conf;
 @Conf("simbot")
 public class MyBatisConfiguration {
 
+    @Conf(value = "mapper.mapperResourceScan", comment = "mapper.xml的扫描路径。")
+    private String[] mapperResourceScan = new String[0];
+
     /**
      * mybatis的配置文件的资源路径。
      * 如果没有则使用以下的简化配置，如果有则直接优先使用此配置。
@@ -43,7 +46,7 @@ public class MyBatisConfiguration {
     /**
      * mapper的扫描路径
      */
-    @Conf(value = "mapper.scanPackage", comment = "mapper的扫描路径")
+    @Conf(value = "mapper.mapperScan", comment = "mapper接口的扫描路径")
     private String[] mapperScan = new String[0];
 
     public String getDriver() {
@@ -92,5 +95,13 @@ public class MyBatisConfiguration {
 
     public void setConfig(String config) {
         this.config = config;
+    }
+
+    public String[] getMapperResourceScan() {
+        return mapperResourceScan;
+    }
+
+    public void setMapperResourceScan(String[] mapperResourceScan) {
+        this.mapperResourceScan = mapperResourceScan;
     }
 }
