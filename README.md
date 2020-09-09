@@ -1,6 +1,6 @@
 # mod-mybatis
 
-[![](https://img.shields.io/badge/simple--robot-module-green)](https://github.com/ForteScarlet/simple-robot-core) [![](https://img.shields.io/maven-central/v/io.github.ForteScarlet.simple-robot-module/mod-mybatis)](https://search.maven.org/artifact/io.github.ForteScarlet.simple-robot-module/mod-mybatis)
+[![](https://img.shields.io/badge/simple--robot-module-green)](https://github.com/ForteScarlet/simple-robot-core) [![](https://img.shields.io/maven-central/v/love.forte.simple-robot-module/mod-mybatis)](https://mvnrepository.com/artifact/love.forte.simple-robot-module/mod-mybatis)
 
 针对于mybatis的模组实现。
 
@@ -8,7 +8,7 @@
 
 ## 导入依赖
 
-[![](https://img.shields.io/maven-central/v/io.github.ForteScarlet.simple-robot-module/mod-mybatis)](https://search.maven.org/artifact/io.github.ForteScarlet.simple-robot-module/mod-mybatis)
+[![](https://img.shields.io/maven-central/v/love.forte.simple-robot-module/mod-mybatis)](https://mvnrepository.com/artifact/love.forte.simple-robot-module/mod-mybatis)
 
 ```xml
 <dependency>
