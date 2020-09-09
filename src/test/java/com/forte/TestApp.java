@@ -4,6 +4,7 @@ import com.forte.mapper.MsgMapper;
 import com.forte.mapper.MsgMapper2;
 import com.forte.qqrobot.SimpleRobotApplication;
 import com.forte.qqrobot.depend.DependCenter;
+import com.forte.service.DemoService;
 import com.simbot.modules.debugger.common.DebugApplication;
 import com.simbot.modules.debugger.common.DebugContext;
 
@@ -18,15 +19,20 @@ public class TestApp {
 
         DependCenter center = context.getDependCenter();
 
-        MsgMapper msgMapper = center.get(MsgMapper.class);
+        final DemoService service = center.get(DemoService.class);
 
-        System.out.println(msgMapper);
-        System.out.println(msgMapper.selectOne());
+        System.out.println(service.run());
+        System.out.println(service.run2());
 
-        MsgMapper2 msgMapper2 = center.get(MsgMapper2.class);
-
-        System.out.println(msgMapper2);
-        System.out.println(msgMapper2.selectOne());
+        // MsgMapper msgMapper = center.get(MsgMapper.class);
+        //
+        // System.out.println(msgMapper);
+        // System.out.println(msgMapper.selectOne());
+        //
+        // MsgMapper2 msgMapper2 = center.get(MsgMapper2.class);
+        //
+        // System.out.println(msgMapper2);
+        // System.out.println(msgMapper2.selectOne());
 
     }
 }
