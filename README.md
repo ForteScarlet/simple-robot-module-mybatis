@@ -103,7 +103,7 @@ simbot.mapper.mapperScan=
 # mapper.xml的扫描路径
 simbot.mapper.mapperResourceScan=mappers
 # mybatis的mapper的扫描路径
-simbot.mapper.scanPackage=com.forte.mapper
+simbot.mapper.mapperScan=com.forte.mapper
 
 # 数据库驱动. 驱动相关的依赖需要自己导入
 simbot.db.driver=com.mysql.cj.jdbc.Driver
