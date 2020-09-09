@@ -17,7 +17,7 @@
 
 
     <properties>
-        <core.version>1.16.2</core.version>
+        <core.version>1.16.3</core.version>
         <mybatis.version>3.4.6</mybatis.version>
         <mysql.version>6.0.5</mysql.version>
     </properties>
